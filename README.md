@@ -1,12 +1,13 @@
 # 🎵 ESC-50 Audio Classifier
 
+[![Accuracy](https://img.shields.io/badge/Accuracy-82%25-brightgreen?style=flat-square)](#-model-architecture)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Librosa](https://img.shields.io/badge/Librosa-Audio_ML-blueviolet?style=flat-square)](https://librosa.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![Modal](https://img.shields.io/badge/Modal-Cloud_GPU-000000?style=flat-square)](https://modal.com/)
 
-A concise, end-to-end Environmental Sound Classifier trained on the **ESC-50** dataset (50 classes). It converts raw audio waveforms into **Log-Mel Spectrograms** to perform sound recognition using a 2D Convolutional Neural Network (CNN).
+A concise, end-to-end Environmental Sound Classifier trained on the **ESC-50** dataset (50 classes) achieving **82% test accuracy**. It converts raw audio waveforms into **Log-Mel Spectrograms** to perform sound recognition using a 2D Convolutional Neural Network (CNN).
 
 ---
 
@@ -41,7 +42,8 @@ Input (1x128x128 Log-Mel Spectrogram)
   └──► Linear(256 ➔ 50) ──► Logits
 ```
 
-- **Parameters:** ~387K trainable parameters
+- **Accuracy:** **82%** Test Accuracy
+- **Parameters:** ~401K trainable parameters
 - **Optimizer:** Adam (`lr=1e-3`, `weight_decay=4e-4`)
 - **Scheduler:** CosineAnnealingLR (`T_max=100`, `eta_min=1e-6`)
 
